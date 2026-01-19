@@ -1,1 +1,293 @@
 
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Registration | Daarul-Aflax</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Epilogue:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#205888",
+                        "secondary": "#8EC39D",
+                        "accent": "#FFC72C",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#13191f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "heading": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Epilogue', sans-serif;
+        }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .dark .bento-card {
+            background: rgba(30, 41, 59, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary dark:text-white font-black text-xl leading-none heading-font">Daarul-Aflax</span>
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Academic Excellence</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Programs</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Admission</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+                    Contact Support
+                </button>
+<div class="size-9 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Student profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwLTgnIMavtKZfcq93Cx4VQhuZrO8ovCfIQ_yx-DUNPmVFVoP8w7yfYEn-l6e9tiAzjDG-iPIwJTv7GP2x4uagwMQ5yERQc9ncgsDrlg3D-qzmMPp1i5OzGh2w_txon579KA-0YHl30MQLtMQDmSJAUkcZ8xswFYZLEpgOdGJ14-FUpWvBt2W4aZkU3fUGa_Gy-abIy3iHFLPBFovy40ZUlpwpzNcDp1-XhdYMmpo22KBiePStQyYBD57v-F2KleHL7ZRY64VJCaQ"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Heading -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-black heading-font tracking-tight text-slate-900 dark:text-white mb-4">
+                    Student <span class="text-primary">Registration</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400">
+                    Join our vibrant learning community. Fill out the enrollment form below to start your academic journey at <span class="font-bold text-primary">Daarul-Aflax</span>.
+                </p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-sm">description</span>
+                    Requirements
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-bold shadow-sm hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-sm">help</span>
+                    FAQ
+                </button>
+</div>
+</div>
+<!-- Registration Form Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Form -->
+<div class="lg:col-span-8 space-y-8">
+<form class="space-y-8">
+<!-- Section: Student Information -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-8 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<h2 class="text-xl font-bold heading-font uppercase tracking-wider text-slate-800 dark:text-slate-200">Student Information</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Full Name</label>
+<div class="relative">
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all px-4" placeholder="e.g. Ahmed Mohamed" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Age</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all px-4" placeholder="Enter age" type="number"/>
+</div>
+</div>
+</div>
+<!-- Section: Parent/Guardian Contact -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-8 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">family_restroom</span>
+</div>
+<h2 class="text-xl font-bold heading-font uppercase tracking-wider text-slate-800 dark:text-slate-200">Parent / Guardian</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Parent Name</label>
+<input class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all px-4" placeholder="Full name of parent" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Contact Number</label>
+<div class="flex">
+<span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-700 text-slate-500 text-sm">+252</span>
+<input class="flex-1 h-12 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-r-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all px-4" placeholder="61XXXXXXX" type="tel"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Academic Selection -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-8 rounded bg-accent/10 flex items-center justify-center text-accent">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h2 class="text-xl font-bold heading-font uppercase tracking-wider text-slate-800 dark:text-slate-200">Course Selection</h2>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-300">Select Primary Course</label>
+<select class="w-full h-12 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all px-4 cursor-pointer">
+<option disabled="" selected="" value="">Choose a program...</option>
+<option value="somali">Somali Studies</option>
+<option value="math">Mathematics</option>
+<option value="english">English Literature</option>
+<option value="computer">Computer Science</option>
+<option value="health">Health &amp; Sciences</option>
+</select>
+</div>
+<div class="p-4 bg-primary/5 rounded-lg border border-primary/10 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                                    You can select additional elective courses after the initial registration process is completed. Our academic advisors will guide you through the curriculum.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 flex flex-col gap-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="size-5 rounded text-primary focus:ring-primary border-slate-300 transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">
+                                I agree to the <a class="underline font-bold" href="#">Terms of Enrollment</a> and Student Code of Conduct.
+                            </span>
+</label>
+<button class="w-full md:w-auto md:min-w-[240px] h-14 bg-primary hover:bg-primary/95 text-white rounded-xl font-black heading-font text-lg shadow-lg shadow-primary/20 hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3" type="submit">
+                            Submit Application
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Info & Summary -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Why Choose Us -->
+<div class="bg-primary text-white p-8 rounded-xl shadow-xl overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[160px]">school</span>
+</div>
+<h3 class="text-2xl font-bold heading-font mb-4">Why Daarul-Aflax?</h3>
+<ul class="space-y-4 relative z-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-sm font-medium">Certified expert educators</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-sm font-medium">Modern digital learning tools</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-sm font-medium">Community-focused environment</span>
+</li>
+</ul>
+</div>
+<!-- Assistance Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-xl shadow-sm">
+<h3 class="text-lg font-bold heading-font mb-4 text-slate-800 dark:text-slate-100">Need Help?</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                        If you have any questions regarding the registration process or course selection, our support team is available 24/7.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined text-primary">call</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Call Us</span>
+<span class="text-sm font-bold">+252 61 000 0000</span>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400">Email Us</span>
+<span class="text-sm font-bold">admissions@daarul-aflax.edu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Registration Progress -->
+<div class="bg-accent/5 border border-accent/20 p-6 rounded-xl">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-black uppercase tracking-tighter text-accent-700">Registration Steps</span>
+<span class="text-xs font-bold text-accent-700">Step 1 of 3</span>
+</div>
+<div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-accent rounded-full"></div>
+</div>
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-xs font-bold text-primary">
+<span class="material-symbols-outlined text-sm">radio_button_checked</span> Basic Information
+                        </div>
+<div class="flex items-center gap-2 text-xs font-bold text-slate-400">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span> Document Upload
+                        </div>
+<div class="flex items-center gap-2 text-xs font-bold text-slate-400">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span> Fee Payment
+                        </div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-12 bg-white dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 justify-center md:justify-start">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs">school</span>
+</div>
+<span class="font-bold heading-font">Daarul-Aflax Academy</span>
+</div>
+<p class="text-sm text-slate-500">© 2024 Daarul-Aflax. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
